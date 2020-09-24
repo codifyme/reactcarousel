@@ -1,5 +1,6 @@
 .slider{
     border:1px solid red;
+    position:relative;
     width: 100%;
     height:100vh;
     box-sizing:border-box;
@@ -12,4 +13,21 @@
     border:1px solid blue;
     min-width: 100%;
     height: 80vh;
+}
+%btn-styles{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:10%;
+    height:80%;
+    background:none;
+}
+#goleft{
+    left:0;
+    @extend %btn-styles;
+}
+
+#goRight{
+    right:0;
+    @extend %btn-styles;
 }

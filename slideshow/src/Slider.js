@@ -5,6 +5,9 @@ import './slider.scss';
 function Slider(){
     //let's create an array for component to show inside the slider
     let sliderArr=[1,2,3,4,5]//just numbers for now
+    //add buttons
+    const goLeft=()=>{};
+    const goRight=()=>{};
     return(
         <div className="slider">
         {
@@ -16,9 +19,8 @@ function Slider(){
                 );
             })
         }
-        //lets add two buttons to navigate
-        <button>Left</button>
-        <button>right</button>
+        <button id="goleft" onClick={goLeft}>Left</button>
+        <button id="goRight" onClick={goRight}>right</button>
         </div>
         );
 }
