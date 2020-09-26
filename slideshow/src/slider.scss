@@ -1,5 +1,4 @@
 .slider{
-    border:1px solid red;
     position:relative;
     width: 100%;
     height:100vh;
@@ -8,6 +7,11 @@
     padding:0;
     display:flex;
     align-items:center;
+    overflow:hidden;
+    background:black;
+    i{
+        font: size 2vw;
+    }
 }
 .slide{
     position:relative;
@@ -15,6 +19,7 @@
     min-width: 100%;
     height: 80%;
     transition:0.5s;
+    overflow:hidden;
 }
 %btn-styles{
     position:absolute;
@@ -23,14 +28,19 @@
     width:10%;
     height:80%;
     background:none;
+    border:none;
+    outline:none;
+    transition:0.5s;
+    &:hover{
+        background:rgba(0,0,0,0.356);
+        cursor: pointer;
+        i{
+            color:whitesmoke;
+        }
+    }
 }
 #goleft{
-    position:absolute;
-    top:50%;
     left:0;
-    transform:translateY(-50%);
-    width:10%;
-    height: 80vh;
     @extend %btn-styles;
 }
 
