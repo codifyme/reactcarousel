@@ -9,7 +9,7 @@ import i5 from "./pics/5.jpg";
 
 
 function Slider(){
-    const[x, setX]=useState(0);
+    
     //let's create an array for component to show inside the slider
     //Let's add comopnent to the Array
     let sliderArr=[
@@ -19,10 +19,13 @@ function Slider(){
     <ImgComp src={i4}/>,
     <ImgComp src={i5}/>];//just numbers for now
     //add buttons
+    const[x, setX]=useState(0);
     const goLeft=()=>{
+        console.log(x);
         x===0 ? setX(-100*(sliderArr.length-1)):setX(x+100);
     };
     const goRight=()=>{
+        console.log(x);
         //sliderArr.lenght was used so the input can be dynamic
         x===-100*(sliderArr.length-1)? setX(0):setX(x-100);
     };
@@ -45,7 +48,7 @@ function Slider(){
         </button>
         <button id="goRight" onClick={goRight}>
             <i class="fas fa-chevron-right"></i>
-            </button>
+        </button>
         </div>
         );
 }
