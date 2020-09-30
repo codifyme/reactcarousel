@@ -6,7 +6,7 @@ import i2 from "./pics/2.jpg";
 import i3 from "./pics/3.jpg";
 import i4 from "./pics/4.jpg";
 import i5 from "./pics/5.jpg";
-import i6 from "./pics/6.jpg";
+
 
 
 function Slider(){
@@ -18,8 +18,7 @@ function Slider(){
     <ImgComp src={i2}/>,
     <ImgComp src={i3}/>,
     <ImgComp src={i4}/>,
-    <ImgComp src={i5}/>,
-    <imgComp src={i6}/>];//just numbers for now
+    <ImgComp src={i5}/>];//just numbers for now
     //add buttons
     const[x, setX]=useState(0);
     const goLeft=()=>{
@@ -44,10 +43,11 @@ function Slider(){
             })
         }
         <button id="goLeft" onClick={goLeft}>
-        <i class="fas fa-chevron-Left">left</i>
+        <i class="fas fa-chevron-left">left</i>
         </button>
+        
         <button id="goRight" onClick={goRight}>
-        <i class="fas fa-angle-right"></i>
+        <i class="fas fa-angle-right">right</i>
         </button>
         </div>
         );
